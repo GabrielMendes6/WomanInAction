@@ -1,0 +1,293 @@
+:root {
+    --light-purple: #d2c7ff;
+    --light-purple2: #af9bff;
+    --light-gray: #f2f2f2;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #c4c4c4;
+    --dark-purple: #32004a;
+    --font-size-base: 16px;
+}
+
+
+body {
+    background-color: var(--light-gray);
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    background-color: var(--light-purple);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 !important;
+}
+
+
+#logo {
+    img {
+        width: 80%;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none; /* Ocultar no desktop */
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#openChat.hidden {
+    display: none !important;
+}
+
+nav ul.show {
+    display: flex; /* Mostrar links ao clicar no menu */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--light-gray);
+    font-weight: bold;
+}
+
+#search {
+    padding: 5px;
+}
+
+#home {
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#filtros {
+    width: 20%;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    width: 60%;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vaga {
+    border-bottom: 1px solid var(--gray);
+    padding: 10px 0;
+    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+}
+
+.vaga h3 a {
+    color: var(--dark-purple);
+}
+
+.vaga-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vaga-info span {
+    font-size: 0.9rem;
+}
+
+#showChat {
+    width: 70px;
+    height: 70px;
+    background-color: var(--light-purple);
+    border-radius: 100%;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#conversas {
+    text-align: center;
+    width: 20%;
+}
+
+#conversas.hidden {
+    display: none;
+}
+
+#boxConversas {
+    position: fixed;
+    display: contents;
+}
+
+#boxConversas h3 {
+    margin: 0 auto;
+}
+
+#boxConversas a {
+    color: var(--black);
+}
+
+
+#conversas ul {
+    list-style: none;
+}
+
+#conversas li {
+    text-align: left;
+}
+
+#showChat {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#showChat img {
+    width: 50%;
+    
+}
+
+#chat {
+    position: fixed;
+    width: 15%;
+    height: 55vh;
+    background-color: var(--light-gray);
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    right: .5%;
+    bottom: 15%;
+}
+
+#chat.hidden {
+    display: none;
+}
+
+
+.chat-header {
+    background-color: var(--light-purple2);
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.chat-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.chat-body p {
+    background-color: var(--dark-purple);
+    padding: 2% 5%;
+    border-radius: 10px;
+    color: var(--light-gray);
+}
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-footer input {
+    width: 80%;
+    padding: 5px;
+    border: none;
+}
+
+.chat-footer button {
+    width: 20%;
+    background-color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+    }
+
+    #filtros {
+        width: 100%;
+        padding: 0;
+    }
+
+    #filtros h2 {
+        padding: 0 10px;
+    }
+
+    .vaga {
+        margin: 10px;
+    }
+
+    main {
+        width: 100%;
+        padding: 0;
+    }
+
+    main h2 {
+        padding: 0 10px;
+    }
+
+    #logo img {
+        width: 100%; /* Logo centralizado em dispositivos móveis */
+    }
+
+    #showChat {
+        display: none;
+    }
+
+    #openChat.hidden {
+        display: flex !important;
+    }
+
+    nav ul {
+        display: none; /* Ocultar links de navegação em dispositivos móveis */
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--light-purple);
+        top: 60px;
+        right: 0;
+        width: 200px;
+        z-index: 1;
+    }
+
+    nav ul.show {
+        display: flex; /* Mostrar links ao clicar no menu */
+        width: 100%;
+        height: 100vh;
+        top: 10%;
+    }
+
+    #menu-toggle {
+        display: block; /* Mostrar o menu hamburger */
+    }
+
+    #chat {
+        display: none; /* Ocultar chat por padrão em dispositivos móveis */
+    }
+
+    #chat.hidden {
+        display: none; /* Ocultar chat se a classe "hidden" estiver presente */
+    }
+}

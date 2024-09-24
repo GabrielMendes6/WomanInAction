@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+
+    <script src="../../src/js/main.js" defer></script>
+    <title>Woman in Action</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div id="logo">
+            <img src="../../src/img/LogoAtivo 1.png" alt="Logo">
+        </div>
+        <nav>
+            <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li>
+                    <input type="text" id="search" placeholder="Buscar vagas..." onkeyup="filterJobs()">
+                </li>
+                <li><a href="#">AJUDA</a></li>
+                <li><a href="../login/Login.html">SAIR</a></li>
+                <li><a href="#" id="openChat" class="hidden">CHAT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home">
+        <!-- Filtros -->
+        <aside id="filtros">
+            <h2>Local de Trabalho</h2>
+            <ul>
+                <li><input type="checkbox"> 100% Remoto</li>
+                <li><input type="checkbox"> Hibrido</li>
+                <li><input type="checkbox" checked> Presencial</li>
+            </ul>
+
+            <h2>Regime</h2>
+            <ul>
+                <li><input type="checkbox" checked> Regime CLT</li>
+                <li><input type="checkbox"> Estágio</li>
+                <li><input type="checkbox"> Temporário</li>
+                <li><input type="checkbox"> Freelancer</li>
+            </ul>
+        </aside>
+
+        <!-- Lista de Vagas -->
+        <main id="job-list">
+            <h2>10 Vagas para:</h2>
+            <!-- 1° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Supervisora de Projetos</a></h3>
+                <p>Confidencial - Sênior</p>
+                <p>Descrição: Responsável por liderar projetos e gerenciar equipes.</p>
+                <div class="vaga-info">
+                    <span>📍 Brusque / SC</span>
+                    <span>⏰ 22/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 2° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Modelo de Viagens</a></h3>
+                <p>Confidencial - Sênior</p>
+                <p>Descrição: Criar roteiros e planejar viagens personalizadas.</p>
+                <div class="vaga-info">
+                    <span>📍 Brusque / SC</span>
+                    <span>⏰ 22/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 3° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Modelista</a></h3>
+                <p>Confidencial - Sênior</p>
+                <p>Descrição: Desenvolver modelos e moldes para produção.</p>
+                <div class="vaga-info">
+                    <span>📍 Brusque / SC</span>
+                    <span>⏰ 22/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 4° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Designer Gráfico</a></h3>
+                <p>Confidencial - Júnior</p>
+                <p>Descrição: Criar layouts e designs visuais para campanhas.</p>
+                <div class="vaga-info">
+                    <span>📍 São Paulo / SP</span>
+                    <span>⏰ 21/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 5° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Desenvolvedor Frontend</a></h3>
+                <p>Confidencial - Pleno</p>
+                <p>Descrição: Implementar interfaces de usuário utilizando React.</p>
+                <div class="vaga-info">
+                    <span>📍 Florianópolis / SC</span>
+                    <span>⏰ 20/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 6° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Engenheiro de Software</a></h3>
+                <p>Confidencial - Sênior</p>
+                <p>Descrição: Projetar e desenvolver sistemas de software.</p>
+                <div class="vaga-info">
+                    <span>📍 Porto Alegre / RS</span>
+                    <span>⏰ 19/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 7° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Coordenador de Projetos</a></h3>
+                <p>Confidencial - Sênior</p>
+                <p>Descrição: Coordenar equipes e garantir o sucesso dos projetos.</p>
+                <div class="vaga-info">
+                    <span>📍 Brasília / DF</span>
+                    <span>⏰ 18/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 8° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Analista de Dados</a></h3>
+                <p>Confidencial - Pleno</p>
+                <p>Descrição: Analisar dados e fornecer insights para a equipe.</p>
+                <div class="vaga-info">
+                    <span>📍 Rio de Janeiro / RJ</span>
+                    <span>⏰ 17/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 9° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Gerente de Projetos</a></h3>
+                <p>Confidencial - Sênior</p>
+                <p>Descrição: Gerenciar recursos e prazos de projetos complexos.</p>
+                <div class="vaga-info">
+                    <span>📍 Curitiba / PR</span>
+                    <span>⏰ 16/09/2024</span>
+                </div>
+            </div>
+
+            <!-- 10° Vaga -->
+            <div class="vaga">
+                <h3><a href="#">Vaga para Técnico de TI</a></h3>
+                <p>Confidencial - Júnior</p>
+                <p>Descrição: Suporte técnico e manutenção de sistemas de TI.</p>
+                <div class="vaga-info">
+                    <span>📍 Salvador / BA</span>
+                    <span>⏰ 15/09/2024</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chat -->
+
+        <a onclick="openChat()">
+            <div id="showChat">
+                <img src="../../src/img/chat.svg" alt="">
+                
+            </div>
+        </a>
+
+        <!-- Lista de Conversas -->
+        <div id="conversas" class="hidden">
+            <div id="boxConversas">
+                <h3>Conversas</h3>
+                <ul>
+                    <li><a href="#" onclick="entryChat('Nome da Conversa 1')">Vaga Para Analista de dados</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="chat" class="hidden">
+            <div class="chat-header">
+                <span>Nome</span>
+            </div>
+            <div class="chat-body">
+                <p>Olá, somos da empresa... e estamos contratando!</p>
+            </div>
+            <div class="chat-footer">
+                <input type="text" placeholder="Mensagem...">
+                <button>send</button>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

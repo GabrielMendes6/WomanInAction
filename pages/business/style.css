@@ -1,0 +1,7 @@
+#forBusiness {
+    border-bottom: 4px solid var(--light-purple) !important;
+}
+
+#forYou {
+    border-bottom: 4px solid transparent !important;
+}
